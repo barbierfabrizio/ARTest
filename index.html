@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>UrbanAR</title>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+    <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+	<script type='text/javascript' src='test.js'></script>
+	<link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+	<div class="showInfoDiv" id="showInfoDiv">
+		<button class="showInfoButton" id="showInfoButton">Toon info</button>
+	</div>
+	<div class="resetDiv" id="resetDiv">
+		<button class="resetButton" id="resetButton">Andere acties bekijken</button>
+		<!-- use this button to reset page and show action points again -->
+	</div>
+	<div class="centered instructions" id="informationBox">
+		<div class="title">
+			<h2 id="actionTitle"></h2>
+		</div>
+		<div class="informationText">
+			<p id="actionText"></p>
+			<div class="icons">
+				<div class="icon" id="likeButton"><p>👍</p></div>
+				<div class="icon" id="commentButton"><p>💬</p></div>
+				<div class="icon" id="shareButton"><p>🌐</p></div>
+			</div>
+		</div>
+		<div>
+			<button class="show3DModelsButton" id="3dModelButton">Toon 3D Modellen</button>
+		</div>
+		<div>
+			<button class="readMoreButton" id="readMoreButton">Lees meer</button>
+		</div>
+	</div>
+	<a-scene cursor='rayOrigin: mouse; fuseTimeout: 0' raycaster='near: 0; far: 50000' vr-mode-ui='enabled: false'
+		arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true;'>
+		<a-assets id="aAssets">
+			<a-asset-item id="test" src="./assets/asset.gltf"></a-asset-item>
+			<!-- <a-asset-item id="bench" src="./assets/bench.gltf"></a-asset-item>
+			<a-asset-item id="lamp_post" src="./assets/3d_models/lamp_post/scene.gltf"></a-asset-item>
+			<a-asset-item id="picknick" src="./assets/3d_models/picknick/scene.gltf"></a-asset-item>
+			<a-asset-item id="public_trash_bin" src="./assets/3d_models/public_trash_bin_1/scene.gltf"></a-asset-item>
+			<a-asset-item id="trash_bin" src="./assets/3d_models/trash_bin/scene.gltf"></a-asset-item>
+			<a-asset-item id="football_goal" src="./assets/3d_models/football_goal_rework/scene.gltf"></a-asset-item>
+			<a-asset-item id="platano_tree" src="./assets/3d_models/platano_tree/scene.gltf"></a-asset-item> -->
+		</a-assets>
+		<!-- <a-scene ar-hit-test="type:footprint;footprintDepth:0.2;">
+        <a-entity id="my-objects">
+        </a-entity>
+     </a-scene> -->
+		<a-camera gps-new-camera='gpsMinDistance: 0;' near='0.1' far='50000' rotation-reader></a-camera>
+		
+	</a-scene>
+</body>
+
+</html>
+<!-- <a-asset-item id="test" src="@Url.Content("~/gltf/asset.gltf")"></a-asset-item> -->
+
+<!-- "Wooden Bench" (https://skfb.ly/696CU) by 3DMish is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). -->
+<!-- "Map Pointer (3D Icon)" (https://skfb.ly/ooNzy) by Alexander is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). -->

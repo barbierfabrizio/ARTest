@@ -41,8 +41,8 @@ function loadGltfModelsOfAction() { // get from db later
             height: -150,
             assetName: "bench.gltf",
             name: "bench2",
-            id: "0",
-            actionId: "0",
+            id: "1",
+            actionId: "1",
             scale: 0.5,
             yRotation: 0
         },

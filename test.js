@@ -19,6 +19,11 @@ function loadPlaces() { // actions
             lon: 4.139128065474563,
             id: "1",
         },
+        {
+            lat: 51.17189345929133,
+            lon: 4.140338301658631,
+            id: "2",
+        },
     ]
 }
 
@@ -39,11 +44,22 @@ function loadGltfModelsOfAction() { // get from db later
             lat: 51.171925226603605,
             lon: 4.139067374012707,
             height: -150,
-            assetName: "bench.gltf",
-            name: "bench2",
+            assetName: "bench_city.gltf",
+            name: "benchCity",
             id: "1",
             actionId: "1",
-            scale: 0.5,
+            scale: 100,
+            yRotation: 0
+        },
+        {
+            lat: 51.17178915045922,
+            lon: 4.140279293060304,
+            height: -160,
+            assetName: "lamp_post.gltf",
+            name: "lampPost",
+            id: "2",
+            actionId: "2",
+            scale: 100,
             yRotation: 0
         },
     ]

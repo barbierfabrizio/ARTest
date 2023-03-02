@@ -14,6 +14,11 @@ function loadPlaces() { // actions
             lon: 4.140010936583743,
             id: "0",
         },
+        {
+            lat: 51.17191571343433,
+            lon: 4.139128065474563,
+            id: "1",
+        },
     ]
 }
 
@@ -25,6 +30,17 @@ function loadGltfModelsOfAction() { // get from db later
             height: -150,
             assetName: "bench.gltf",
             name: "bench",
+            id: "0",
+            actionId: "0",
+            scale: 0.5,
+            yRotation: 0
+        },
+        {
+            lat: 51.171925226603605,
+            lon: 4.139067374012707,
+            height: -150,
+            assetName: "bench.gltf",
+            name: "bench2",
             id: "0",
             actionId: "0",
             scale: 0.5,

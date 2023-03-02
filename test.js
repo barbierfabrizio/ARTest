@@ -43,12 +43,12 @@ function loadGltfModelsOfAction() { // get from db later
         {
             lat: 51.171925226603605,
             lon: 4.139067374012707,
-            height: -150,
+            height: 0,
             assetName: "bench_city.gltf",
             name: "benchCity",
             id: "1",
             actionId: "1",
-            scale: 100,
+            scale: 50,
             yRotation: 0
         },
         {

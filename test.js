@@ -10,8 +10,8 @@ AFRAME.registerComponent('clicker', { // click on intrest point
 function loadPlaces() { // actions
     return [
         {
-            lat: 51.217797187300434,
-            lon: 4.402776043144049,
+            lat: 51.21779094434832,
+            lon: 4.402951005248933,
             id: "0",
         },
         {
@@ -33,8 +33,8 @@ function loadPlaces() { // actions
 function loadGltfModelsOfAction() { // get from db later
     return [
         {
-            lat: 51.217796889206355,
-            lon: 4.402752809693845,
+            lat: 51.21779332185027,
+            lon: 4.402920659518005,
             height: -150,
             assetName: "bench.gltf",
             name: "bench",

@@ -217,16 +217,12 @@ function loadActionPoints() {
 
 function showGLTFModel(lat, lon, id) {
     var model = loadGltfModelsOfAction().find(m => m.actionId === id)
-    // const compoundEntity = document.createElement("a-entity");
-    // compoundEntity.setAttribute('gps-new-entity-place', {
-    //     latitude: model.lat, // change to lat of gltf model later
-    //     longitude: model.lon // change to lon of gltf model later
-    // });
-    const gltfModel = document.createElement("a-entity");
-    gltfModel.setAttribute('gps-new-entity-place', {
+    const compoundEntity = document.createElement("a-entity");
+    compoundEntity.setAttribute('gps-new-entity-place', {
         latitude: model.lat, // change to lat of gltf model later
         longitude: model.lon // change to lon of gltf model later
     });
+    const gltfModel = document.createElement("a-entity");
     gltfModel.setAttribute("scale", {
         x: model.scale,
         y: model.scale,
@@ -234,7 +230,7 @@ function showGLTFModel(lat, lon, id) {
     });
     gltfModel.setAttribute('gltf-model', '#' + model.name);
     gltfModel.setAttribute('id', model.name + 'Model');
-    gltfModel.setAttribute('look-at', '[gps-new-camera]');
+    // gltfModel.setAttribute('look-at', '[gps-new-camera]');
     gltfModel.setAttribute("position", {
         x: 0,
         y: model.height, // set height
@@ -245,6 +241,6 @@ function showGLTFModel(lat, lon, id) {
         y: model.yRotation,
         z: 0
     });
-    // compoundEntity.appendChild(gltfModel);
-    document.querySelector("a-scene").appendChild(gltfModel);
+    compoundEntity.appendChild(gltfModel);
+    document.querySelector("a-scene").appendChild(compoundEntity);
 }

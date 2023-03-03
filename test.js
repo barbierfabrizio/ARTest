@@ -10,14 +10,9 @@ AFRAME.registerComponent('clicker', { // click on intrest point
 function loadPlaces() { // actions
     return [
         {
-            lat: 51.21779213388743,
-            lon: 4.4028751409216325,
+            lat: 51.217797187300434,
+            lon: 4.402776043144049,
             id: "0",
-        },
-        {
-            lat: 51.21776420666377,
-            lon: 4.403211788874107,
-            id: "1",
         },
         {
             lat: 51.2179413412029,
@@ -27,28 +22,25 @@ function loadPlaces() { // actions
     ]
 }
 
+
+// ,
+//         {
+//             lat: 51.21776420666377,
+//             lon: 4.403211788874107,
+//             id: "1",
+//         },
+
 function loadGltfModelsOfAction() { // get from db later
     return [
         {
-            lat: 51.217793914570706,
-            lon: 4.402843846886629,
+            lat: 51.217796889206355,
+            lon: 4.402752809693845,
             height: -150,
             assetName: "bench.gltf",
             name: "bench",
             id: "0",
             actionId: "0",
             scale: 0.5,
-            yRotation: 0
-        },
-        {
-            lat: 51.21776182695355,
-            lon: 4.403244031213226,
-            height: 0,
-            assetName: "bench_city.gltf",
-            name: "benchCity",
-            id: "1",
-            actionId: "1",
-            scale: 50,
             yRotation: 0
         },
         {
@@ -64,6 +56,18 @@ function loadGltfModelsOfAction() { // get from db later
         },
     ]
 }
+
+// {
+//     lat: 51.217793914570706,
+//     lon: 4.402843846886629,
+//     height: -150,
+//     assetName: "bench.gltf",
+//     name: "bench",
+//     id: "0",
+//     actionId: "0",
+//     scale: 0.5,
+//     yRotation: 0
+// },
 
 function showInformationBox() {
     document.getElementById("informationBox").style.display = "block"

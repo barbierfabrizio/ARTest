@@ -148,36 +148,6 @@ function addGltfModelToAAssets(id) {
             document.querySelector("a-assets").appendChild(assetItem);
 }
 
-function showGLTFModel(lat, lon, id) {
-    var model = loadGltfModelsOfAction().find(m => m.actionId === id)
-    const compoundEntity = document.createElement("a-entity");
-    compoundEntity.setAttribute('gps-new-entity-place', {
-        latitude: model.lat, // change to lat of gltf model later
-        longitude: model.lon // change to lon of gltf model later
-    });
-    const gltfModel = document.createElement("a-entity");
-    gltfModel.setAttribute("scale", {
-        x: model.scale,
-        y: model.scale,
-        z: model.scale
-    });
-    gltfModel.setAttribute('gltf-model', '#' + model.name);
-    gltfModel.setAttribute('id', model.name + 'Model');
-    gltfModel.setAttribute('look-at', '[gps-new-camera]');
-    gltfModel.setAttribute("position", {
-        x: 0,
-        y: model.height, // set height
-        z: 180
-    });
-    gltfModel.setAttribute("rotation", {
-        x: 0,
-        y: model.yRotation,
-        z: 0
-    });
-    compoundEntity.appendChild(gltfModel);
-    document.querySelector("a-scene").appendChild(compoundEntity);
-}
-
 function addOnClickResetButton(id) {
     document.getElementById("resetButton").onclick = function () {
         // hide buttons and information box
@@ -243,4 +213,38 @@ function loadActionPoints() {
         compoundEntity.appendChild(gltfModel);
         document.querySelector("a-scene").appendChild(compoundEntity);
     });
+}
+
+function showGLTFModel(lat, lon, id) {
+    var model = loadGltfModelsOfAction().find(m => m.actionId === id)
+    // const compoundEntity = document.createElement("a-entity");
+    // compoundEntity.setAttribute('gps-new-entity-place', {
+    //     latitude: model.lat, // change to lat of gltf model later
+    //     longitude: model.lon // change to lon of gltf model later
+    // });
+    const gltfModel = document.createElement("a-entity");
+    gltfModel.setAttribute('gps-new-entity-place', {
+        latitude: model.lat, // change to lat of gltf model later
+        longitude: model.lon // change to lon of gltf model later
+    });
+    gltfModel.setAttribute("scale", {
+        x: model.scale,
+        y: model.scale,
+        z: model.scale
+    });
+    gltfModel.setAttribute('gltf-model', '#' + model.name);
+    gltfModel.setAttribute('id', model.name + 'Model');
+    gltfModel.setAttribute('look-at', '[gps-new-camera]');
+    gltfModel.setAttribute("position", {
+        x: 0,
+        y: model.height, // set height
+        z: 180
+    });
+    gltfModel.setAttribute("rotation", {
+        x: 0,
+        y: model.yRotation,
+        z: 0
+    });
+    // compoundEntity.appendChild(gltfModel);
+    document.querySelector("a-scene").appendChild(gltfModel);
 }

@@ -41,20 +41,8 @@
 		arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true;'>
 		<a-assets id="aAssets">
 			<a-asset-item id="test" src="./assets/asset.gltf"></a-asset-item>
-			<!-- <a-asset-item id="bench" src="./assets/bench.gltf"></a-asset-item>
-			<a-asset-item id="lamp_post" src="./assets/3d_models/lamp_post/scene.gltf"></a-asset-item>
-			<a-asset-item id="picknick" src="./assets/3d_models/picknick/scene.gltf"></a-asset-item>
-			<a-asset-item id="public_trash_bin" src="./assets/3d_models/public_trash_bin_1/scene.gltf"></a-asset-item>
-			<a-asset-item id="trash_bin" src="./assets/3d_models/trash_bin/scene.gltf"></a-asset-item>
-			<a-asset-item id="football_goal" src="./assets/3d_models/football_goal_rework/scene.gltf"></a-asset-item>
-			<a-asset-item id="platano_tree" src="./assets/3d_models/platano_tree/scene.gltf"></a-asset-item> -->
 		</a-assets>
-		<!-- <a-scene ar-hit-test="type:footprint;footprintDepth:0.2;">
-        <a-entity id="my-objects">
-        </a-entity>
-     </a-scene> -->
-		<a-camera gps-new-camera='gpsMinDistance: 0;' near='0.1' far='10000' rotation-reader></a-camera>
-		
+		<a-camera gps-new-camera='gpsMinDistance: 10;' near='0.1' far='5000' rotation-reader></a-camera>	
 	</a-scene>
 </body>
 

@@ -10,18 +10,18 @@ AFRAME.registerComponent('clicker', { // click on intrest point
 function loadPlaces() { // actions
     return [
         {
-            lat: 51.172332507322935,
-            lon: 4.140010936583743,
+            lat: 51.21779213388743,
+            lon: 4.4028751409216325,
             id: "0",
         },
         {
-            lat: 51.17191571343433,
-            lon: 4.139128065474563,
+            lat: 51.21776420666377,
+            lon: 4.403211788874107,
             id: "1",
         },
         {
-            lat: 51.17189345929133,
-            lon: 4.140338301658631,
+            lat: 51.2179413412029,
+            lon: 4.403094199166776,
             id: "2",
         },
     ]
@@ -30,8 +30,8 @@ function loadPlaces() { // actions
 function loadGltfModelsOfAction() { // get from db later
     return [
         {
-            lat: 51.17232121053396,
-            lon: 4.140005246759172,
+            lat: 51.217793914570706,
+            lon: 4.402843846886629,
             height: -150,
             assetName: "bench.gltf",
             name: "bench",
@@ -41,8 +41,8 @@ function loadGltfModelsOfAction() { // get from db later
             yRotation: 0
         },
         {
-            lat: 51.171925226603605,
-            lon: 4.139067374012707,
+            lat: 51.21776182695355,
+            lon: 4.403244031213226,
             height: 0,
             assetName: "bench_city.gltf",
             name: "benchCity",
@@ -52,8 +52,8 @@ function loadGltfModelsOfAction() { // get from db later
             yRotation: 0
         },
         {
-            lat: 51.17178915045922,
-            lon: 4.140279293060304,
+            lat: 51.21794074438617,
+            lon: 4.40312738980997,
             height: -160,
             assetName: "lamp_post.gltf",
             name: "lampPost",

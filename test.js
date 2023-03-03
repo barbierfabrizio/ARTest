@@ -1,10 +1,11 @@
 AFRAME.registerComponent('clicker', { // click on intrest point
     init: function () {
         this.el.addEventListener('click', e => {
-            onClickIntrestPoint(this.el.parentEl.components["gps-new-entity-place"].attrValue.latitude + 0.001, this.el.parentEl.components["gps-new-entity-place"].attrValue.longitude, this.el.id)  // get from db later
+            const dist = this.el.components["gps-new-entity-place"].distance;
+            onClickIntrestPoint(this.el.parentEl.components["gps-new-entity-place"].attrValue.latitude + 0.001, this.el.parentEl.components["gps-new-entity-place"].attrValue.longitude, this.el.id, dist)  // get from db later
 
             // distance
-            const dist = this.el.components["gps-new-entity-place"].distance;
+            // const dist = this.el.components["gps-new-entity-place"].distance;
             alert(dist === undefined ? "Please move to a new location to obtain the distance" : `This object is ${dist} metres away.`);
         });
     }
@@ -83,17 +84,17 @@ function loadGltfModelsOfAction() { // get from db later
 //     yRotation: 0
 // },
 
-function showInformationBox() {
+function showInformationBox(dist) {
     document.getElementById("informationBox").style.display = "block"
-    loadInformationBoxData()
+    loadInformationBoxData(dist)
 }
 
 function hideInformationBox() {
     document.getElementById("informationBox").style.display = "none"
 }
 
-function loadInformationBoxData() { // get from db later
-    document.getElementById("actionTitle").innerText = "Een bankje in het park"
+function loadInformationBoxData(dist) { // get from db later
+    document.getElementById("actionTitle").innerText = "Een bankje in het park " + dist
     document.getElementById("actionText").innerText = "Om op te rusten en te genieten!"
 }
 
@@ -147,9 +148,9 @@ function hideResetDiv() {
     document.getElementById("resetDiv").style.display = "none"
 }
 
-function onClickIntrestPoint(lat, lon, id) {
+function onClickIntrestPoint(lat, lon, id, dist) {
     addOnClickResetButton(id)
-    showInformationBox() // show information box
+    showInformationBox(dist) // show information box
     hideAllIntrestPoints() // make all intrest points invisible
     addOnClick3DModel(lat, lon, id) // add onClick to show 3D Models
 }
@@ -229,14 +230,44 @@ function loadActionPoints() {
     });
 }
 
+// function showGLTFModel(lat, lon, id) {
+//     var model = loadGltfModelsOfAction().find(m => m.actionId === id)
+//     const compoundEntity = document.createElement("a-entity");
+//     compoundEntity.setAttribute('gps-new-entity-place', {
+//         latitude: model.lat, // change to lat of gltf model later
+//         longitude: model.lon // change to lon of gltf model later
+//     });
+//     const gltfModel = document.createElement("a-entity");
+//     gltfModel.setAttribute("scale", {
+//         x: model.scale,
+//         y: model.scale,
+//         z: model.scale
+//     });
+//     gltfModel.setAttribute('gltf-model', '#' + model.name);
+//     gltfModel.setAttribute('id', model.name + 'Model');
+//     // gltfModel.setAttribute('look-at', '[gps-new-camera]');
+//     gltfModel.setAttribute("position", {
+//         x: 0,
+//         y: model.height, // set height
+//         z: 180
+//     });
+//     gltfModel.setAttribute("rotation", {
+//         x: 0,
+//         y: model.yRotation,
+//         z: 0
+//     });
+//     gltfModel.setAttribute("clickerdistance", "") // onClick
+//     compoundEntity.appendChild(gltfModel);
+//     document.querySelector("a-scene").appendChild(compoundEntity);
+// }
+
 function showGLTFModel(lat, lon, id) {
     var model = loadGltfModelsOfAction().find(m => m.actionId === id)
-    const compoundEntity = document.createElement("a-entity");
-    compoundEntity.setAttribute('gps-new-entity-place', {
+    const gltfModel = document.createElement("a-entity");
+    gltfModel.setAttribute('gps-new-entity-place', {
         latitude: model.lat, // change to lat of gltf model later
         longitude: model.lon // change to lon of gltf model later
     });
-    const gltfModel = document.createElement("a-entity");
     gltfModel.setAttribute("scale", {
         x: model.scale,
         y: model.scale,

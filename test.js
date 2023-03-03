@@ -2,6 +2,20 @@ AFRAME.registerComponent('clicker', { // click on intrest point
     init: function () {
         this.el.addEventListener('click', e => {
             onClickIntrestPoint(this.el.parentEl.components["gps-new-entity-place"].attrValue.latitude + 0.001, this.el.parentEl.components["gps-new-entity-place"].attrValue.longitude, this.el.id)  // get from db later
+
+            // distance
+            const dist = this.el.components["gps-new-entity-place"].distance;
+            alert(dist === undefined ? "Please move to a new location to obtain the distance" : `This object is ${dist} metres away.`);
+        });
+    }
+});
+
+AFRAME.registerComponent('clickerdistance', { // click on intrest point
+    init: function () {
+        this.el.addEventListener('click', e => {
+            // distance
+            const dist = this.el.components["gps-new-entity-place"].distance;
+            alert(dist === undefined ? "Please move to a new location to obtain the distance" : `This object is ${dist} metres away.`);
         });
     }
 });
@@ -241,6 +255,7 @@ function showGLTFModel(lat, lon, id) {
         y: model.yRotation,
         z: 0
     });
+    gltfModel.setAttribute("clickerdistance", "") // onClick
     compoundEntity.appendChild(gltfModel);
     document.querySelector("a-scene").appendChild(compoundEntity);
 }

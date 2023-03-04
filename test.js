@@ -80,7 +80,7 @@ function loadGltfModelsOfAction() { // get from db later
             lat: 51.17200239985572,
             lon: 4.139917054478693,
             height: -15,
-            assetName: "lamp_post.gltf",
+            assetName: "bench_city.gltf",
             name: "bench",
             id: "3",
             actionId: "3",

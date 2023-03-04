@@ -33,8 +33,8 @@ function loadPlaces() { // actions
 function loadGltfModelsOfAction() { // get from db later
     return [
         {
-            lat: 51.21779332185027,
-            lon: 4.402920659518005,
+            lat: 51.1722896568199,
+            lon: 4.139988273382188,
             height: -150,
             assetName: "bench.gltf",
             name: "bench",
@@ -79,7 +79,7 @@ function hideInformationBox() {
 }
 
 function loadInformationBoxData() { // get from db later
-    document.getElementById("actionTitle").innerText = "Een bankje in het park1"
+    document.getElementById("actionTitle").innerText = "Een bankje in het park2"
     document.getElementById("actionText").innerText = "Om op te rusten en te genieten!"
 }
 

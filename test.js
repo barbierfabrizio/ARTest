@@ -41,6 +41,16 @@ function loadPlaces() { // actions
             lon: 4.139073063837238,
             id: "4",
         },
+        {
+            lat: 51.18312443290398,
+            lon: 4.130054691927106,
+            id: "5",
+        },
+        {
+            lat: 51.183622035104364,
+            lon: 4.132345318794251,
+            id: "6",
+        },
     ]
 }
 
@@ -96,6 +106,28 @@ function loadGltfModelsOfAction() { // get from db later
             id: "4",
             actionId: "4",
             scale: 0.05,
+            yRotation: 90
+        },
+        {
+            lat: 51.183238563055355,
+            lon: 4.129984517424337,
+            height: -15,
+            assetName: "bench_city.gltf",
+            name: "bench",
+            id: "5",
+            actionId: "5",
+            scale: 0.05,
+            yRotation: 90
+        },
+        {
+            lat: 51.18360185974178,
+            lon: 4.132280945777894,
+            height: -15,
+            assetName: "bench_city.gltf",
+            name: "bench",
+            id: "6",
+            actionId: "6",
+            scale: 0.1,
             yRotation: 90
         },
     ]

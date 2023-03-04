@@ -10,8 +10,8 @@ AFRAME.registerComponent('clicker', { // click on intrest point
 function loadPlaces() { // actions
     return [
         {
-            lat: 51.21779094434832,
-            lon: 4.402951005248933,
+            lat: 51.17230311036323,
+            lon: 4.1399963200092325,
             id: "0",
         },
         {
@@ -79,7 +79,7 @@ function hideInformationBox() {
 }
 
 function loadInformationBoxData() { // get from db later
-    document.getElementById("actionTitle").innerText = "Een bankje in het park"
+    document.getElementById("actionTitle").innerText = "Een bankje in het park1"
     document.getElementById("actionText").innerText = "Om op te rusten en te genieten!"
 }
 

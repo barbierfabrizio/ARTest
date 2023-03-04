@@ -277,11 +277,11 @@ function showGLTFModel(lat, lon, id) {
     gltfModel.setAttribute("position", {
         x: 0,
         y: model.height, // set height
-        z: 10
+        z: 0
     });
     gltfModel.setAttribute("rotation", {
         x: 0,
-        y: model.yRotation,
+        y: 0,
         z: 0
     });
     gltfModel.setAttribute("clickgltf", "") // onClick

@@ -2,6 +2,18 @@ AFRAME.registerComponent('clicker', { // click on intrest point
     init: function () {
         this.el.addEventListener('click', e => {
             onClickIntrestPoint(this.el.parentEl.components["gps-new-entity-place"].attrValue.latitude + 0.001, this.el.parentEl.components["gps-new-entity-place"].attrValue.longitude, this.el.id)  // get from db later
+            const dist = this.el.parentEl.components["gps-new-entity-place"].distance;
+            alert("distance from action point: " + dist)
+        });
+    }
+});
+
+
+AFRAME.registerComponent('clickgltf', { // click on intrest point
+    init: function () {
+        this.el.addEventListener('click', e => {
+            const dist = this.el.parentEl.components["gps-new-entity-place"].distance;
+            alert("distance from model: " + dist)
         });
     }
 });
@@ -79,7 +91,7 @@ function hideInformationBox() {
 }
 
 function loadInformationBoxData() { // get from db later
-    document.getElementById("actionTitle").innerText = "Een bankje in het park2"
+    document.getElementById("actionTitle").innerText = "Een bankje in het park3"
     document.getElementById("actionText").innerText = "Om op te rusten en te genieten!"
 }
 
@@ -241,6 +253,7 @@ function showGLTFModel(lat, lon, id) {
         y: model.yRotation,
         z: 0
     });
+    gltfModel.setAttribute("clickgltf", "") // onClick
     compoundEntity.appendChild(gltfModel);
     document.querySelector("a-scene").appendChild(compoundEntity);
 }

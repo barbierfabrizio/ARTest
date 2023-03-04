@@ -31,6 +31,16 @@ function loadPlaces() { // actions
             lon: 4.403094199166776,
             id: "2",
         },
+        {
+            lat: 51.171992863350816,
+            lon: 4.139977745940549,
+            id: "3",
+        },
+        {
+            lat: 51.17191891166562,
+            lon: 4.139073063837238,
+            id: "4",
+        },
     ]
 }
 
@@ -66,6 +76,28 @@ function loadGltfModelsOfAction() { // get from db later
             scale: 100,
             yRotation: 0
         },
+        {
+            lat: 51.17200239985572,
+            lon: 4.139917054478693,
+            height: -150,
+            assetName: "bench.gltf",
+            name: "bench",
+            id: "3",
+            actionId: "3",
+            scale: 0.5,
+            yRotation: 0
+        },
+        {
+            lat: 51.17203106994634,
+            lon: 4.139158411205491,
+            height: -150,
+            assetName: "bench.gltf",
+            name: "bench",
+            id: "4",
+            actionId: "4",
+            scale: 0.5,
+            yRotation: 0
+        },
     ]
 }
 
@@ -91,7 +123,7 @@ function hideInformationBox() {
 }
 
 function loadInformationBoxData() { // get from db later
-    document.getElementById("actionTitle").innerText = "Een bankje in het park3"
+    document.getElementById("actionTitle").innerText = "Een bankje in het park4"
     document.getElementById("actionText").innerText = "Om op te rusten en te genieten!"
 }
 

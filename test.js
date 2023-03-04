@@ -57,13 +57,13 @@ function loadGltfModelsOfAction() { // get from db later
         {
             lat: 51.1722896568199,
             lon: 4.139988273382188,
-            height: -150,
+            height: -15,
             assetName: "bench.gltf",
             name: "bench",
             id: "0",
             actionId: "0",
-            scale: 0.5,
-            yRotation: 0
+            scale: 0.05,
+            yRotation: 90
         },
         {
             lat: 51.21794074438617,
@@ -79,24 +79,24 @@ function loadGltfModelsOfAction() { // get from db later
         {
             lat: 51.17200239985572,
             lon: 4.139917054478693,
-            height: -150,
+            height: -15,
             assetName: "bench.gltf",
             name: "bench",
             id: "3",
             actionId: "3",
-            scale: 0.5,
-            yRotation: 0
+            scale: 0.05,
+            yRotation: 90
         },
         {
             lat: 51.17203106994634,
             lon: 4.139158411205491,
-            height: -150,
+            height: -15,
             assetName: "bench.gltf",
             name: "bench",
             id: "4",
             actionId: "4",
-            scale: 0.5,
-            yRotation: 0
+            scale: 0.05,
+            yRotation: 90
         },
     ]
 }
@@ -123,7 +123,7 @@ function hideInformationBox() {
 }
 
 function loadInformationBoxData() { // get from db later
-    document.getElementById("actionTitle").innerText = "Een bankje in het park4"
+    document.getElementById("actionTitle").innerText = "Een bankje in het park6"
     document.getElementById("actionText").innerText = "Om op te rusten en te genieten!"
 }
 
@@ -261,12 +261,11 @@ function loadActionPoints() {
 
 function showGLTFModel(lat, lon, id) {
     var model = loadGltfModelsOfAction().find(m => m.actionId === id)
-    const compoundEntity = document.createElement("a-entity");
-    compoundEntity.setAttribute('gps-new-entity-place', {
+    const gltfModel = document.createElement("a-entity");
+    gltfModel.setAttribute('gps-new-entity-place', {
         latitude: model.lat, // change to lat of gltf model later
         longitude: model.lon // change to lon of gltf model later
     });
-    const gltfModel = document.createElement("a-entity");
     gltfModel.setAttribute("scale", {
         x: model.scale,
         y: model.scale,
@@ -278,7 +277,7 @@ function showGLTFModel(lat, lon, id) {
     gltfModel.setAttribute("position", {
         x: 0,
         y: model.height, // set height
-        z: 180
+        z: 10
     });
     gltfModel.setAttribute("rotation", {
         x: 0,
@@ -286,6 +285,6 @@ function showGLTFModel(lat, lon, id) {
         z: 0
     });
     gltfModel.setAttribute("clickgltf", "") // onClick
-    compoundEntity.appendChild(gltfModel);
-    document.querySelector("a-scene").appendChild(compoundEntity);
+    //compoundEntity.appendChild(gltfModel);
+    document.querySelector("a-scene").appendChild(gltfModel);
 }

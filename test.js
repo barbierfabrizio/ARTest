@@ -12,7 +12,7 @@ AFRAME.registerComponent('clicker', { // click on intrest point
 AFRAME.registerComponent('clickgltf', { // click on intrest point
     init: function () {
         this.el.addEventListener('click', e => {
-            const dist = this.el.parentEl.components["gps-new-entity-place"].distance;
+            const dist = this.el.components["gps-new-entity-place"].distance;
             alert("distance from model: " + dist)
         });
     }

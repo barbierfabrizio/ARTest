@@ -72,7 +72,7 @@ function loadGltfModelsOfAction() { // get from db later
             name: "bench",
             id: "0",
             actionId: "0",
-            scale: 0.05,
+            scale: 0.035,
             yRotation: 90
         },
         {
@@ -83,7 +83,7 @@ function loadGltfModelsOfAction() { // get from db later
             name: "lampPost",
             id: "2",
             actionId: "2",
-            scale: 100,
+            scale: 5,
             yRotation: 0
         },
         {
@@ -94,7 +94,7 @@ function loadGltfModelsOfAction() { // get from db later
             name: "bench",
             id: "3",
             actionId: "3",
-            scale: 0.05,
+            scale: 0.035,
             yRotation: 90
         },
         {
@@ -105,7 +105,7 @@ function loadGltfModelsOfAction() { // get from db later
             name: "bench",
             id: "4",
             actionId: "4",
-            scale: 0.05,
+            scale: 0.035,
             yRotation: 90
         },
         {
@@ -116,7 +116,7 @@ function loadGltfModelsOfAction() { // get from db later
             name: "bench",
             id: "5",
             actionId: "5",
-            scale: 0.05,
+            scale: 0.035,
             yRotation: 90
         },
         {
@@ -127,7 +127,7 @@ function loadGltfModelsOfAction() { // get from db later
             name: "bench",
             id: "6",
             actionId: "6",
-            scale: 0.1,
+            scale: 0.035,
             yRotation: 90
         },
     ]

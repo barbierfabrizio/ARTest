@@ -1,9 +1,10 @@
 AFRAME.registerComponent('clicker', { // click on intrest point
     init: function () {
         this.el.addEventListener('click', e => {
-            onClickIntrestPoint(this.el.parentEl.components["gps-new-entity-place"].attrValue.latitude + 0.001, this.el.parentEl.components["gps-new-entity-place"].attrValue.longitude, this.el.id)  // get from db later
-            const dist = this.el.parentEl.components["gps-new-entity-place"].distance;
-            alert("distance from action point: " + dist)
+            onClickIntrestPoint(this.el.id)  // get from db later
+            // onClickIntrestPoint(this.el.parentEl.components["gps-new-entity-place"].attrValue.latitude + 0.001, this.el.parentEl.components["gps-new-entity-place"].attrValue.longitude, this.el.id)  // get from db later
+            // const dist = this.el.parentEl.components["gps-new-entity-place"].distance;
+            // alert("distance from action point: " + dist)
         });
     }
 });
@@ -22,8 +23,8 @@ AFRAME.registerComponent('clickgltf', { // click on intrest point
 function loadPlaces() { // actions
     return [
         {
-            lat: 51.17230311036323,
-            lon: 4.1399963200092325,
+            lat: 51.17233253997563,
+            lon: 4.140007048845292,
             id: "0",
         },
         {
@@ -65,15 +66,15 @@ function loadPlaces() { // actions
 function loadGltfModelsOfAction() { // get from db later
     return [
         {
-            lat: 51.1722896568199,
-            lon: 4.139988273382188,
-            height: -15,
+            lat: 51.17232581320873,
+            lon: 4.140040576457978,
+            height: -5,
             assetName: "bench.gltf",
             name: "bench",
             id: "0",
             actionId: "0",
             scale: 0.035,
-            yRotation: 90
+            yRotation: 260
         },
         {
             lat: 51.21794074438617,
@@ -173,11 +174,11 @@ function showAllIntrestPoints() {
     }
 }
 
-function addOnClick3DModel(lat, lon, id) {
+function addOnClick3DModel(id) {
     document.getElementById("3dModelButton").onclick = function () {
         hideInformationBox()
         addGltfModelToAAssets(id)
-        showGLTFModel(lat, lon, id)
+        showGLTFModel(id)
         showShowInfo()
         addOnClickShowInfoButton(id)
         showResetDiv() // show reset button
@@ -209,11 +210,11 @@ function hideResetDiv() {
     document.getElementById("resetDiv").style.display = "none"
 }
 
-function onClickIntrestPoint(lat, lon, id) {
+function onClickIntrestPoint(id) {
     addOnClickResetButton(id)
     showInformationBox() // show information box
     hideAllIntrestPoints() // make all intrest points invisible
-    addOnClick3DModel(lat, lon, id) // add onClick to show 3D Models
+    addOnClick3DModel(id) // add onClick to show 3D Models
 }
 
 function addGltfModelToAAssets(id) {
@@ -291,7 +292,7 @@ function loadActionPoints() {
     });
 }
 
-function showGLTFModel(lat, lon, id) {
+function showGLTFModel(id) {
     var model = loadGltfModelsOfAction().find(m => m.actionId === id)
     const gltfModel = document.createElement("a-entity");
     gltfModel.setAttribute('gps-new-entity-place', {
@@ -317,6 +318,5 @@ function showGLTFModel(lat, lon, id) {
         z: 0
     });
     gltfModel.setAttribute("clickgltf", "") // onClick
-    //compoundEntity.appendChild(gltfModel);
     document.querySelector("a-scene").appendChild(gltfModel);
 }

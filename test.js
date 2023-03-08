@@ -85,7 +85,7 @@ function loadGltfModelsOfAction() { // get from db later
             id: "2",
             actionId: "2",
             scale: 0.035,
-            yRotation: 180
+            yRotation: 260
         },
         {
             lat: 51.17200239985572,

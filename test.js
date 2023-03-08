@@ -68,24 +68,24 @@ function loadGltfModelsOfAction() { // get from db later
         {
             lat: 51.21778892439178,
             lon: 4.402796431682026,
-            height: -5,
-            assetName: "bench.gltf",
-            name: "bench",
+            height: -2,
+            assetName: "bench_city.gltf",
+            name: "bench_city",
             id: "0",
             actionId: "0",
             scale: 0.035,
-            yRotation: 260
+            yRotation: 0
         },
         {
             lat: 51.217963647296116,
             lon: 4.402917814605739,
-            height: -5,
-            assetName: "bench.gltf",
-            name: "benchh",
+            height: -4,
+            assetName: "lamp_post.gltf",
+            name: "lamp_post",
             id: "2",
             actionId: "2",
-            scale: 0.035,
-            yRotation: 260
+            scale: 0.5,
+            yRotation: 0
         },
         {
             lat: 51.17200239985572,

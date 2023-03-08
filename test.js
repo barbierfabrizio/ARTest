@@ -23,13 +23,13 @@ AFRAME.registerComponent('clickgltf', { // click on intrest point
 function loadPlaces() { // actions
     return [
         {
-            lat: 51.17233253997563,
-            lon: 4.140007048845292,
+            lat: 51.21780556469694,
+            lon: 4.402802121506598,
             id: "0",
         },
         {
-            lat: 51.2179413412029,
-            lon: 4.403094199166776,
+            lat: 51.21796534383146,
+            lon: 4.402883648872376,
             id: "2",
         },
         {
@@ -66,8 +66,8 @@ function loadPlaces() { // actions
 function loadGltfModelsOfAction() { // get from db later
     return [
         {
-            lat: 51.17232581320873,
-            lon: 4.140040576457978,
+            lat: 51.21778892439178,
+            lon: 4.402796431682026,
             height: -5,
             assetName: "bench.gltf",
             name: "bench",
@@ -77,15 +77,15 @@ function loadGltfModelsOfAction() { // get from db later
             yRotation: 260
         },
         {
-            lat: 51.21794074438617,
-            lon: 4.40312738980997,
-            height: -160,
-            assetName: "lamp_post.gltf",
-            name: "lampPost",
+            lat: 51.217963647296116,
+            lon: 4.402917814605739,
+            height: -5,
+            assetName: "bench.gltf",
+            name: "benchh",
             id: "2",
             actionId: "2",
-            scale: 5,
-            yRotation: 0
+            scale: 0.035,
+            yRotation: 180
         },
         {
             lat: 51.17200239985572,

@@ -21,50 +21,22 @@
 		</button>
 	</div>
 	<div class="showInfoDiv" id="showInfoDiv">
-		<button class="showInfoButton" id="showInfoButton">
-			<i class="bi bi-arrow-left-circle"></i>
-		</button>
+		<button class="showInfoButton" id="showInfoButton">Toon info</button>
 	</div>
 	<div class="resetDiv" id="resetDiv">
-		<button class="resetButton" id="resetButton">
-			<i class="bi bi-x-circle"></i>
-		</button>
+		<button class="resetButton" id="resetButton">Andere acties bekijken</button>
+		<!-- use this button to reset page and show action points again -->
 	</div>
-	<div class="settings-popup" id="settings-popup" style="display: none">
-		<div class="container">
-			<div id="tags-div" class="mt-3"></div>
-		</div>
-	</div>
-	<div class="logo-div" id="logo-div">
-		<img id="logo-img" src="https://bpart.be/wp-content/uploads/2021/08/cropped-Bpart_LogoZwart_2-1024x400.png" alt="bpart logo">
-	</div>
-	<div class="informationBox" id="informationBox">
-		<button type="button" class="btn-close close-button" aria-label="Close" id="close-info"></button>
+	<div class="centered instructions" id="informationBox">
 		<div class="title">
-			<h2 class="mt-3" id="actionTitle"></h2>
-			<h3 id="projectTitle"></h3>
+			<h2 id="actionTitle"></h2>
 		</div>
 		<div class="informationText">
-			<p class="mt-1" id="actionText"></p>
-		</div>
-		<div class="writer-div">
-			<p class="m-0" id="writer"></p>
-		</div>
-		<div class="icons">
-			<div class="icon" id="likeButton">
-				<p class="m-1">
-					<i id="likes" class="bi bi-hand-thumbs-up"></i>
-				</p>
-			</div>
-			<div class="icon" id="commentButton">
-				<p class="m-1">
-					<i id="comments" class="bi bi-chat"></i>
-				</p>
-			</div>
-			<div class="icon" id="shareButton">
-				<p class="m-1">
-					<i id="shares" class="bi bi-globe"></i>
-				</p>
+			<p id="actionText"></p>
+			<div class="icons">
+				<div class="icon" id="likeButton"><p>👍</p></div>
+				<div class="icon" id="commentButton"><p>💬</p></div>
+				<div class="icon" id="shareButton"><p>🌐</p></div>
 			</div>
 		</div>
 		<div>
@@ -74,22 +46,12 @@
 			<button class="readMoreButton" id="readMoreButton">Lees meer</button>
 		</div>
 	</div>
-	<div class="informationBox" id="commentBox" style="overflow: scroll; display: none">
-		<button type="button" class="btn-close close-button" aria-label="Close" id="closeReactions"></button>
-		<div id="commentList"></div>
-		<div>
-			<input type="text" id="commentContentText" placeholder="Geef een reactie..." class="form-control w-100"/>
-		</div>
-		<div>
-			<button class="btn w-100 position-absolute bottom-0" for="addANote" id="submitComment">Plaats</button>
-		</div>
-	</div>
 	<a-scene cursor='rayOrigin: mouse; fuseTimeout: 0' raycaster='near: 0; far: 50000' vr-mode-ui='enabled: false'
-			 arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true;'>
+		arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true;'>
 		<a-assets id="aAssets">
-			<a-asset-item id="test" src="@Url.Content("gltf/map_pointer_3d_icon.glb")"></a-asset-item>
+			<a-asset-item id="test" src="./assets/asset.gltf"></a-asset-item>
 		</a-assets>
-		<a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 1;' near='0.1' far='5000' rotation-reader></a-camera>
+		<a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 1;' near='0.1' far='5000' rotation-reader></a-camera>	
 	</a-scene>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>

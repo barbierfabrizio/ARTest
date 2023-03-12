@@ -1,0 +1,263 @@
+html {
+    font-size: 14px;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    margin-bottom: 60px;
+  }
+  
+  .informationBox {
+    position: fixed;
+    height: 80vh;
+    width: 90%;
+    top: 5%;
+    font-size: 1.25em;
+    color: black;
+    display: none; 
+    z-index: 999999;
+    border-radius: 10px;
+    background-color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  
+  .show3DModelsButton {
+    position: absolute;
+    width: 60%;
+    height: 12%;
+    bottom: 0;
+    left: 0;
+    background-color: #e47e77;
+    border: 0;
+    border-bottom-left-radius: 10px;
+    color: white;
+  }
+  
+  .readMoreButton {
+    position: absolute;
+    width: 40%;
+    height: 12%;
+    bottom: 0;
+    right: 0;
+    background-color: #48818b;
+    border: 0;
+    border-bottom-right-radius: 10px;
+    color: white;
+  }
+  
+  .title {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 12px 10px 10px 10px;
+  }
+  
+  .informationText {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 44%;
+    padding: 10px;
+  }
+  
+  .writer-div {
+    position: absolute;
+    bottom: 24%;
+    width: 100%;
+    height: 12%;
+    background-color: rgb(184,206,226);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .icons {
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    bottom: 12%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .icon {
+    position: relative;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .showInfoDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    z-index: 999999;
+    display: none;
+  }
+  
+  .showInfoButton {
+    background-color: #e47e77;
+    border: none;
+    font-size: 31px;
+    height: 60px;
+    width: 60px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 70%;
+  }
+  
+  .resetDiv {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    z-index: 999999;
+    display: none;
+  
+  }
+  
+  .resetButton {
+    background-color: #48818b; 
+    border: none;
+    font-size: 31px;
+    height: 60px;
+    width: 60px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 70%;
+  }
+  
+  .settings-div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    z-index: 999999;
+  }
+  
+  .settings-button {
+    background-color: #aed4ae;
+    border: none;
+    font-size: 31px;
+    height: 60px;
+    width: 60px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 70%;
+  }
+  
+  .settings-button:hover {
+    background-color: #b9e0b9;
+  }
+  
+  .settings-button:active {
+    box-shadow: 0 1px 2px darkslategray;
+    transform: translateY(1px);
+  }
+  
+  .settings-popup {
+    background-color: white;
+    position: fixed;
+    top: 65px;
+    right: 0;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    z-index: 999999;
+    border-radius: 10px;
+    width: 90%;
+    height: 76%;
+    font-size: 1.25em;
+  }
+  
+  .logo-div {
+    width: 120px;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1vh;
+    margin-right: 2vw;
+    z-index: 999999;
+  }
+  
+  #logo-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .close-button {
+    float: right;
+    margin: 0.25rem;
+    position: relative;
+    z-index: 1000000;
+  }
+  
+  #commentList {
+    position: absolute;
+    bottom: 24%;
+    width: 100%;
+    height: 71%;
+    overflow: scroll;
+  }
+  
+  #commentContentText {
+    position: absolute;
+    height: 12%;
+    bottom: 12%;
+    font-size: 1.25em;
+    border-radius: 0;
+    background-color: rgb(184,206,226);
+    border: 1px solid white;
+  }
+  
+  #submitComment {
+    height: 12%; 
+    font-size: 1.25em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #aed4ae;
+  }
+  
+  .comment {
+    width: 100%;
+    background-color: #e47e77;
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    word-wrap: break-word;
+  }
+  
+  .comment:nth-child(even) {
+    background-color: #48818b;
+  }
+  
+  .comment h4,.comment span {
+    display: inline;
+  }
+  

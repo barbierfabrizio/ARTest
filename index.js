@@ -192,12 +192,12 @@ function loadActivityMarkers() {
         {
             activityId: "0",
             activityTitle: "Een bankje in het park",
-            latLng: "51.17214, 4.139532"
+            latLng: "51.218024, 4.4031169"
         },
         {
             activityId: "1",
             activityTitle: "Een bankje in het park",
-            latLng: "51.18312, 4.130058"
+            latLng: "51.21779, 4.4028741"
         }
     ]
 
@@ -322,7 +322,7 @@ function loadActivityModels(activityId) {
             activityId: "0",
             modelId: "0",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.172042, 4.139473",
+            latLng: "51.218017, 4.403158",
             height: -7,
             rotation: 260,
             scale: 0.030,
@@ -332,7 +332,7 @@ function loadActivityModels(activityId) {
             activityId: "1",
             modelId: "1",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.183177, 4.130018",
+            latLng: "51.21779, 4.40287",
             height: -7,
             rotation: 260,
             scale: 0.030,
@@ -355,7 +355,7 @@ function removeActivityModels(activityId) {
             activityId: "0",
             modelId: "0",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.172042, 4.139473",
+            latLng: "51.218017, 4.403158",
             height: -7,
             rotation: 260,
             scale: 0.030,
@@ -365,7 +365,7 @@ function removeActivityModels(activityId) {
             activityId: "1",
             modelId: "1",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.183177, 4.130018",
+            latLng: "51.21779, 4.40287",
             height: -7,
             rotation: 260,
             scale: 0.030,

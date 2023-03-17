@@ -306,3 +306,19 @@ html {
     display: inline;
   }
   
+  /* #map{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+  } */
+
+/* #map {
+  height: 100%;
+} */
+
+.mapTest {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}

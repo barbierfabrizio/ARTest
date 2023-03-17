@@ -193,6 +193,51 @@ html {
     height: 76%;
     font-size: 1.25em;
   }
+
+  .map-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    z-index: 999999;
+  }
+  
+  .map-button {
+    background-color: #aed4ae;
+    border: none;
+    font-size: 31px;
+    height: 60px;
+    width: 60px;
+    box-shadow: 0 2px 4px darkslategray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 70%;
+  }
+  
+  .map-button:hover {
+    background-color: #b9e0b9;
+  }
+  
+  .map-button:active {
+    box-shadow: 0 1px 2px darkslategray;
+    transform: translateY(1px);
+  }
+  
+  .map-popup {
+    background-color: white;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    z-index: 999999;
+    border-radius: 10px;
+    width: 90%;
+    height: 76%;
+    font-size: 1.25em;
+  }
+  
   
   .logo-div {
     width: 120px;

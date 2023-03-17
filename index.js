@@ -1,12 +1,51 @@
 let excludedTagIds = [];
+let map;
 
 
 window.onload = () => {
-    let downloaded = false;
+    map = L.map('map').setView([51.214, 4.411], 18);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    const legend = L.control({position: 'bottomleft'})
+
+    legend.onAdd = function () {
+        const div = L.DomUtil.create('div', 'info legend');
+        div.innerHTML += '<div class="d-flex flex-row">' +
+            '<div class="d-flex justify-content-center" style="width: 25px; height: 25px"><img src="https://static.thenounproject.com/png/1141815-200.png" width="25" height="25" alt="You are here" /></div><div class="d-flex align-items-center"> You are here</div></div>';
+        div.innerHTML += '<div class="d-flex flex-row"><div class="d-flex justify-content-center" style="width: 25px; height: 25px"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png" width="17" height="25" alt="Interest point" /></div><div class="d-flex align-items-center"> Interest point</div></div>';
+        return div;
+    };
+
+    legend.addTo(map);
+
+    
+    document.getElementById("map-popup").style.display = "none";
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+        map.panTo([position.coords.latitude, position.coords.longitude]);
+        L.marker(L.latLng(position.coords.latitude, position.coords.longitude), {
+            icon: L.icon({
+                iconUrl: 'https://static.thenounproject.com/png/1141815-200.png',
+                iconSize: [25, 25],
+                iconAnchor: [14, 27],
+                shadowSize: [0, 0]
+            })
+        }).addTo(map);
+    });
+
+
+
+   // let downloaded = false;
     // addOnClickResetButton()
     const settingsPopup = document.getElementById("settings-popup");
+    const mapPopup = document.getElementById("map-popup");
     document.getElementById("settings-button").addEventListener("click", function() {
         if (settingsPopup.style.display === "none") {
+            mapPopup.style.display = "none";
             settingsPopup.style.display = "block";
         } else {
             settingsPopup.style.display = "none";
@@ -14,15 +53,25 @@ window.onload = () => {
         }
     });
 
-    const el = document.querySelector("[gps-new-camera]");
-
-
-    el.addEventListener("gps-camera-update-position", async (e) => {
-        if (!downloaded) {
-            loadActivityMarkers()
+    document.getElementById("map-button").addEventListener("click", function () {
+        if (mapPopup.style.display === "none") {
+            settingsPopup.style.display = "none";
+            mapPopup.style.display = "block";
+        } else {
+            mapPopup.style.display = "none";
         }
-        downloaded = true;
     });
+
+    // const el = document.querySelector("[gps-new-camera]");
+
+
+    // el.addEventListener("gps-camera-update-position", async (e) => {
+    //     if (!downloaded) {
+    //         loadActivityMarkers()
+    //     }
+    //     downloaded = true;
+    // });
+    loadActivityMarkers()
 
     loadTags()
 };
@@ -98,6 +147,8 @@ function hideResetDiv() {
 function onClickInterestPoint(id) {
     document.getElementById("settings-button").style.display = "none"
     document.getElementById("settings-popup").style.display = "none"
+    document.getElementById("map-button").style.display = "none"
+    document.getElementById("map-popup").style.display = "none"
     addOnClickCloseButton()
     addOnClickResetButton(id)
     loadActivityInformation(id) // show information box
@@ -112,6 +163,7 @@ function addOnClickCloseButton(id) {
     document.getElementById("close-info").onclick = function () {
         console.log("close button clicked")
         document.getElementById("settings-button").style.display = "block"
+        document.getElementById("map-button").style.display = "block"
         hideResetDiv()
         hideShowInfo()
         hideInformationBox()
@@ -121,6 +173,7 @@ function addOnClickCloseButton(id) {
 function addOnClickResetButton(id) {
     document.getElementById("resetButton").onclick = function () {
         document.getElementById("settings-button").style.display = "block"
+        document.getElementById("map-button").style.display = "block"
         hideResetDiv()
         hideShowInfo()
         hideInformationBox()
@@ -138,10 +191,12 @@ function loadActivityMarkers() {
     const data = [
         {
             activityId: "0",
+            activityTitle: "Een bankje in het park",
             latLng: "51.17214, 4.139532"
         },
         {
             activityId: "1",
+            activityTitle: "Een bankje in het park",
             latLng: "51.18312, 4.130058"
         }
     ]
@@ -151,6 +206,7 @@ function loadActivityMarkers() {
 
 function loadActionPoints(places) {
     places.forEach(place => {
+        addMarker(place)
         const compoundEntity = document.createElement("a-entity");
         compoundEntity.setAttribute("id", "actionPoint")
         compoundEntity.setAttribute('gps-new-entity-place', {
@@ -177,6 +233,21 @@ function loadActionPoints(places) {
         document.querySelector("a-scene").appendChild(compoundEntity);
     });
 }
+
+function addMarker(place) {
+    const latLng = L.latLng(place.latLng.split(',')[0], place.latLng.split(',')[1]);
+    let marker = L.marker(latLng);
+    const icon = marker.options.icon;
+    icon.options.iconSize = [17, 25];
+    icon.options.iconAnchor = [9, 27];
+    icon.options.shadowSize = [0, 0];
+    marker.setIcon(icon);
+    marker.bindPopup(
+        `<div>${place.activityTitle}</div>`,
+        {offset: [-1, 16]});
+    marker.addTo(map);
+}
+
 
 // information box
 function loadActivityInformation(activityId) {

@@ -192,12 +192,42 @@ function loadActivityMarkers() {
         {
             activityId: "0",
             activityTitle: "Een bankje in het park",
-            latLng: "51.218024, 4.4031169"
+            latLng: "51.17214, 4.139532"
         },
         {
             activityId: "1",
             activityTitle: "Een bankje in het park",
-            latLng: "51.21779, 4.4028741"
+            latLng: "51.18312, 4.130058"
+        },
+        {
+            activityId: "2",
+            activityTitle: "test",
+            latLng: "51.172300, 4.139998"
+        },
+        {
+            activityId: "3",
+            activityTitle: "Voetbalveld Bernarduscentrum",
+            latLng: "51.217787, 4.402868"
+        },
+        {
+            activityId: "4",
+            activityTitle: "Vergroening Groenplaats",
+            latLng: "51.21893, 4.40184"
+        },
+        {
+            activityId: "5",
+            activityTitle: "Extra verlichting Groenplaats",
+            latLng: "51.218553, 4.401192"
+        },
+        {
+            activityId: "6",
+            activityTitle: "Basketballen op de Groenplaats",
+            latLng: "51.219392, 4.401470"
+        },
+        {
+            activityId: "7",
+            activityTitle: "Test Aula",
+            latLng: "51.2182702, 4.4010061"
         }
     ]
 
@@ -280,6 +310,72 @@ function loadActivityInformation(activityId) {
             commentCount: 0,
             readMoreUrl: "https://www.antwerpen.be/"
         },
+        {
+            activityId: "2",
+            activityTitle: "test",
+            activityDescription: "test",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 0,
+            shareCount: 0,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
+        {
+            activityId: "3",
+            activityTitle: "Voetbalveld Bernarduscentrum",
+            activityDescription: "Een sportieve gelegenheid voor de studenten van KdG",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 5,
+            shareCount: 2,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
+        {
+            activityId: "4",
+            activityTitle: "Vergroening Groenplaats",
+            activityDescription: "Extra bomen en banken op de Groenplaats",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 10,
+            shareCount: 5,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
+        {
+            activityId: "5",
+            activityTitle: "Extra verlichting Groenplaats",
+            activityDescription: "Extra lantaarnpalen op de Groenplaats",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 2,
+            shareCount: 1,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
+        {
+            activityId: "6",
+            activityTitle: "Basketballen op de Groenplaats",
+            activityDescription: "Een tijdelijke basketbalring op de Groenplaats",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 15,
+            shareCount: 1,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
+        {
+            activityId: "7",
+            activityTitle: "Test Aula",
+            activityDescription: "Test Aula",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 15,
+            shareCount: 1,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
     ]
 
     const data = dataList.find(a => a.activityId === activityId)
@@ -332,14 +428,104 @@ function loadActivityModels(activityId) {
             activityId: "1",
             modelId: "1",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.21779, 4.40287",
+            latLng: "51.183177, 4.130018",
             height: -7,
             rotation: 260,
             scale: 0.030,
-            savedFileName: "wooden_bench-20230306224054.glb"
+            savedFileName: "wooden_bench-20230306224053.glb"
+        },
+        {
+            activityId: "2",
+            modelId: "2",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.172256, 4.139977",
+            height: -3,
+            rotation: 90,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
+        },
+        {
+            activityId: "2",
+            modelId: "3",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.172342, 4.140015",
+            height: -3,
+            rotation: 90,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
+        },
+        {
+            activityId: "3",
+            modelId: "4",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.217871, 4.402883",
+            height: -3,
+            rotation: 90,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
+        },
+        {
+            activityId: "3",
+            modelId: "5",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.217698, 4.402844",
+            height: -3,
+            rotation: 90,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
+        },
+        {
+            activityId: "4",
+            modelId: "6",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.218999, 4.401781",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230306324058.glb"
+        },
+        {
+            activityId: "4",
+            modelId: "7",
+            modelSrcUrl: "./assets/wooden_bench.glb",
+            latLng: "51.218994, 4.401918",
+            height: -7,
+            rotation: 260,
+            scale: 0.030,
+            savedFileName: "wooden_bench-20230306224053.glb"
+        },
+        {
+            activityId: "5",
+            modelId: "8",
+            modelSrcUrl: "./assets/lamppost.glb",
+            latLng: "51.218558, 4.401158",
+            height: -5,
+            rotation: 0,
+            scale: 85,
+            savedFileName: "lamppost-20230306224153.glb"
+        },
+        {
+            activityId: "6",
+            modelId: "9",
+            modelSrcUrl: "./assets/basketball_hoop.glb",
+            latLng: "51.219430, 4.401469",
+            height: -2,
+            rotation: 0,
+            scale: 2,
+            savedFileName: "basketball_hoop-20230307224153.glb"
+        },
+        {
+            activityId: "7",
+            modelId: "10",
+            modelSrcUrl: "./assets/wooden_bench.glb",
+            latLng: "51.2183412, 4.4010470",
+            height: -7,
+            rotation: 260,
+            scale: 0.030,
+            savedFileName: "wooden_bench-20230306225053.glb"
         },
     ]
-
+ 
     const data = dataList.filter(a => a.activityId === activityId)
     showGLTFModels(data)
 }
@@ -370,6 +556,96 @@ function removeActivityModels(activityId) {
             rotation: 260,
             scale: 0.030,
             savedFileName: "wooden_bench-20230306224054.glb"
+        },
+        {
+            activityId: "2",
+            modelId: "2",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.172256, 4.139977",
+            height: -3,
+            rotation: 90,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
+        },
+        {
+            activityId: "2",
+            modelId: "3",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.172342, 4.140015",
+            height: -3,
+            rotation: 90,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
+        },
+        {
+            activityId: "3",
+            modelId: "4",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.217871, 4.402883",
+            height: -3,
+            rotation: 90,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
+        },
+        {
+            activityId: "3",
+            modelId: "5",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.217698, 4.402844",
+            height: -3,
+            rotation: 90,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
+        },
+        {
+            activityId: "4",
+            modelId: "6",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.218999, 4.401781",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230306324058.glb"
+        },
+        {
+            activityId: "4",
+            modelId: "7",
+            modelSrcUrl: "./assets/wooden_bench.glb",
+            latLng: "51.218994, 4.401918",
+            height: -7,
+            rotation: 260,
+            scale: 0.030,
+            savedFileName: "wooden_bench-20230306224053.glb"
+        },
+        {
+            activityId: "5",
+            modelId: "8",
+            modelSrcUrl: "./assets/lamppost.glb",
+            latLng: "51.218558, 4.401158",
+            height: -5,
+            rotation: 0,
+            scale: 85,
+            savedFileName: "lamppost-20230306224153.glb"
+        },
+        {
+            activityId: "6",
+            modelId: "9",
+            modelSrcUrl: "./assets/basketball_hoop.glb",
+            latLng: "51.219430, 4.401469",
+            height: -2,
+            rotation: 0,
+            scale: 2,
+            savedFileName: "basketball_hoop-20230307224153.glb"
+        },
+        {
+            activityId: "7",
+            modelId: "10",
+            modelSrcUrl: "./assets/wooden_bench.glb",
+            latLng: "51.2183412, 4.4010470",
+            height: -7,
+            rotation: 260,
+            scale: 0.030,
+            savedFileName: "wooden_bench-20230306225053.glb"
         },
     ]
 
@@ -542,6 +818,30 @@ function loadActivityTags() {
             activityId: "1",
             tagId: "1"
         },
+        {
+            activityId: "2",
+            tagId: "1"
+        },
+        {
+            activityId: "3",
+            tagId: "1"
+        },
+        {
+            activityId: "4",
+            tagId: "1"
+        },
+        {
+            activityId: "5",
+            tagId: "1"
+        },
+        {
+            activityId: "6",
+            tagId: "0"
+        },
+        {
+            activityId: "7",
+            tagId: "0"
+        },
     ]
 
     hideActivitiesWithExcludedTags(dataList)
@@ -602,7 +902,7 @@ function postComment(activityId, commentContentText) {
     const comment = {
         reactionContent: commentContentText,
         commentWriter: "Anonymous",
-        datePlaced: "2023-03-13"
+        datePlaced: "2023-03-22"
     }
 
     showCommentHtml(comment)

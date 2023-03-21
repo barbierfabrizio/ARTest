@@ -437,12 +437,12 @@ function loadActivityModels(activityId) {
         {
             activityId: "2",
             modelId: "2",
-            modelSrcUrl: "./assets/football_goal_rework.glb",
+            modelSrcUrl: "./assets/ape_statue.glb",
             latLng: "51.172256, 4.139977",
-            height: -3,
-            rotation: 90,
-            scale: 2,
-            savedFileName: "football_goal_rework-20230306224058.glb"
+            height: -7,
+            rotation: 260,
+            scale: 10,
+            savedFileName: "ape_statue-20230306224058.glb"
         },
         {
             activityId: "2",
@@ -517,12 +517,12 @@ function loadActivityModels(activityId) {
         {
             activityId: "7",
             modelId: "10",
-            modelSrcUrl: "./assets/wooden_bench.glb",
+            modelSrcUrl: "./assets/tyrannosaurus_rex_skeleton.glb",
             latLng: "51.2183412, 4.4010470",
             height: -7,
-            rotation: 260,
-            scale: 0.030,
-            savedFileName: "wooden_bench-20230306225053.glb"
+            rotation: 0,
+            scale: 25,
+            savedFileName: "tyrannosaurus_rex_skeleton-20230306225053.glb"
         },
     ]
  
@@ -570,12 +570,12 @@ function removeActivityModels(activityId) {
         {
             activityId: "2",
             modelId: "3",
-            modelSrcUrl: "./assets/football_goal_rework.glb",
+            modelSrcUrl: "./assets/ape_statue.glb",
             latLng: "51.172342, 4.140015",
             height: -3,
             rotation: 90,
             scale: 2,
-            savedFileName: "football_goal_rework-20230306224058.glb"
+            savedFileName: "ape_statue-20230306224058.glb"
         },
         {
             activityId: "3",
@@ -640,12 +640,12 @@ function removeActivityModels(activityId) {
         {
             activityId: "7",
             modelId: "10",
-            modelSrcUrl: "./assets/wooden_bench.glb",
+            modelSrcUrl: "./assets/tyrannosaurus_rex_skeleton.glb",
             latLng: "51.2183412, 4.4010470",
             height: -7,
             rotation: 260,
-            scale: 0.030,
-            savedFileName: "wooden_bench-20230306225053.glb"
+            scale: 25,
+            savedFileName: "tyrannosaurus_rex_skeleton-20230306225053.glb"
         },
     ]
 

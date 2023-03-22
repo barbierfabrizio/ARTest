@@ -228,6 +228,16 @@ function loadActivityMarkers() {
             activityId: "7",
             activityTitle: "Test Aula",
             latLng: "51.2182702, 4.4010061"
+        },
+        {
+            activityId: "8",
+            activityTitle: "Vergroening Groenplaats",
+            latLng: "51.219397, 4.401944"
+        },
+        {
+            activityId: "9",
+            activityTitle: "Vergroening Groenplaats",
+            latLng: "51.219007, 4.401327"
         }
     ]
 
@@ -376,6 +386,28 @@ function loadActivityInformation(activityId) {
             commentCount: 0,
             readMoreUrl: "https://www.antwerpen.be/"
         },
+        {
+            activityId: "8",
+            activityTitle: "Vergroening Groenplaats",
+            activityDescription: "Extra bomen op de Groenplaats",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 5,
+            shareCount: 5,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
+        {
+            activityId: "9",
+            activityTitle: "Vergroening Groenplaats",
+            activityDescription: "Extra bomen op de Groenplaats",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 10,
+            shareCount: 2,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        }
     ]
 
     const data = dataList.find(a => a.activityId === activityId)
@@ -450,7 +482,7 @@ function loadActivityModels(activityId) {
             modelSrcUrl: "./assets/football_goal_rework.glb",
             latLng: "51.172342, 4.140015",
             height: -3,
-            rotation: 90,
+            rotation: 180,
             scale: 2,
             savedFileName: "football_goal_rework-20230306224058.glb"
         },
@@ -460,7 +492,7 @@ function loadActivityModels(activityId) {
             modelSrcUrl: "./assets/football_goal_rework.glb",
             latLng: "51.217871, 4.402883",
             height: -3,
-            rotation: 90,
+            rotation: 180,
             scale: 2,
             savedFileName: "football_goal_rework-20230306224058.glb"
         },
@@ -470,7 +502,7 @@ function loadActivityModels(activityId) {
             modelSrcUrl: "./assets/football_goal_rework.glb",
             latLng: "51.217698, 4.402844",
             height: -3,
-            rotation: 90,
+            rotation: 180,
             scale: 2,
             savedFileName: "football_goal_rework-20230306224058.glb"
         },
@@ -490,7 +522,7 @@ function loadActivityModels(activityId) {
             modelSrcUrl: "./assets/wooden_bench.glb",
             latLng: "51.218994, 4.401918",
             height: -7,
-            rotation: 260,
+            rotation: 180,
             scale: 0.030,
             savedFileName: "wooden_bench-20230306224053.glb"
         },
@@ -517,12 +549,32 @@ function loadActivityModels(activityId) {
         {
             activityId: "7",
             modelId: "10",
-            modelSrcUrl: "./assets/tyrannosaurus_rex_skeleton.glb",
+            modelSrcUrl: "./assets/ape_statue.glb",
             latLng: "51.2183412, 4.4010470",
             height: -7,
             rotation: 0,
             scale: 25,
-            savedFileName: "tyrannosaurus_rex_skeleton-20230306225053.glb"
+            savedFileName: "ape_statue-20230306225053.glb"
+        },
+        {
+            activityId: "8",
+            modelId: "11",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.219397, 4.401944",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230306324058.glb"
+        },
+        {
+            activityId: "9",
+            modelId: "12",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.219007, 4.401327",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230306324058.glb"
         },
     ]
  
@@ -640,12 +692,32 @@ function removeActivityModels(activityId) {
         {
             activityId: "7",
             modelId: "10",
-            modelSrcUrl: "./assets/tyrannosaurus_rex_skeleton.glb",
+            modelSrcUrl: "./assets/ape_statue.glb",
             latLng: "51.2183412, 4.4010470",
             height: -7,
             rotation: 260,
+            scale: 5,
+            savedFileName: "ape_statue-20230306225053.glb"
+        },
+        {
+            activityId: "8",
+            modelId: "11",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.219397, 4.401944",
+            height: -5,
+            rotation: 0,
             scale: 25,
-            savedFileName: "tyrannosaurus_rex_skeleton-20230306225053.glb"
+            savedFileName: "stylized_tree-20230306324058.glb"
+        },
+        {
+            activityId: "9",
+            modelId: "12",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.219007, 4.401327",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230306324058.glb"
         },
     ]
 
@@ -840,6 +912,14 @@ function loadActivityTags() {
         },
         {
             activityId: "7",
+            tagId: "0"
+        },
+        {
+            activityId: "8",
+            tagId: "0"
+        },
+        {
+            activityId: "9",
             tagId: "0"
         },
     ]

@@ -227,7 +227,7 @@ function loadActivityMarkers() {
         {
             activityId: "7",
             activityTitle: "Test Aula",
-            latLng: "51.2182702, 4.4010061"
+            latLng: "51.2182811, 4.4009055"
         },
         {
             activityId: "8",
@@ -550,9 +550,9 @@ function loadActivityModels(activityId) {
             activityId: "7",
             modelId: "10",
             modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.2183412, 4.4010470",
+            latLng: "51.2181074, 4.4009206",
             height: -7,
-            rotation: 0,
+            rotation: 260,
             scale: 25,
             savedFileName: "ape_statue-20230306225053.glb"
         },
@@ -693,7 +693,7 @@ function removeActivityModels(activityId) {
             activityId: "7",
             modelId: "10",
             modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.2183412, 4.4010470",
+            latLng: "51.2181074, 4.4009206",
             height: -7,
             rotation: 260,
             scale: 5,

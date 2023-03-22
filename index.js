@@ -470,7 +470,7 @@ function loadActivityModels(activityId) {
             activityId: "2",
             modelId: "2",
             modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.172256, 4.139977",
+            latLng: "51.21812077369592, 4.400496482849122",
             height: -7,
             rotation: 260,
             scale: 10,
@@ -552,7 +552,7 @@ function loadActivityModels(activityId) {
             modelSrcUrl: "./assets/ape_statue.glb",
             latLng: "51.21812077369592, 4.400496482849122",
             height: -7,
-            rotation: 260,
+            rotation: 0,
             scale: 25,
             savedFileName: "ape_statue-20230306225053.glb"
         },
@@ -625,8 +625,8 @@ function removeActivityModels(activityId) {
             modelSrcUrl: "./assets/ape_statue.glb",
             latLng: "51.21812077369592, 4.400496482849122",
             height: -3,
-            rotation: 90,
-            scale: 2,
+            rotation: 0,
+            scale: 5,
             savedFileName: "ape_statue-20230306224058.glb"
         },
         {
@@ -693,10 +693,10 @@ function removeActivityModels(activityId) {
             activityId: "7",
             modelId: "10",
             modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.2180718812, 4.4007196457",
+            latLng: "51.21812077369592, 4.400496482849122",
             height: -7,
-            rotation: 260,
-            scale: 5,
+            rotation: 0,
+            scale: 25,
             savedFileName: "ape_statue-20230306225053.glb"
         },
         {

@@ -470,7 +470,7 @@ function loadActivityModels(activityId) {
             activityId: "2",
             modelId: "2",
             modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.2181611155866, 4.400517940521241",
+            latLng: "51.218124135521485, 4.400517940521241",
             height: -7,
             rotation: 260,
             scale: 10,
@@ -549,12 +549,12 @@ function loadActivityModels(activityId) {
         {
             activityId: "7",
             modelId: "10",
-            modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.2181611155866, 4.400517940521241",
+            modelSrcUrl: "./assets/fast-food.glb",
+            latLng: "51.2182811, 4.4009055",
             height: -7,
-            rotation: 260,
-            scale: 25,
-            savedFileName: "ape_statue-20230306225053.glb"
+            rotation: 0,
+            scale: 20,
+            savedFileName: "fast_food-20230306225053.glb"
         },
         {
             activityId: "8",
@@ -623,7 +623,7 @@ function removeActivityModels(activityId) {
             activityId: "2",
             modelId: "3",
             modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.2181611155866, 4.400517940521241",
+            latLng: "51.218124135521485, 4.400517940521241",
             height: -3,
             rotation: 260,
             scale: 5,
@@ -692,12 +692,12 @@ function removeActivityModels(activityId) {
         {
             activityId: "7",
             modelId: "10",
-            modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.2181611155866, 4.400517940521241",
+            modelSrcUrl: "./assets/fast-food.glb",
+            latLng: "51.2182811, 4.4009055",
             height: -7,
-            rotation: 260,
-            scale: 25,
-            savedFileName: "ape_statue-20230306225053.glb"
+            rotation: 0,
+            scale: 20,
+            savedFileName: "fast_food-20230306225053.glb"
         },
         {
             activityId: "8",
@@ -761,7 +761,7 @@ function showGLTFModels(models) {
         });
         gltfModel.setAttribute("rotation", {
             x: 0,
-            y: 0,
+            y: model.rotation,
             z: 0
         });
         gltfModel.setAttribute("clickgltf", "") // onClick

@@ -755,7 +755,7 @@ function showGLTFModels(models) {
         gltfModel.setAttribute('gltf-model', '#' + model.savedFileName);
         gltfModel.setAttribute('id', model.savedFileName + 'Model');
         gltfModel.setAttribute("position", {
-            x: -50,
+            x: 0,
             y: model.height, // set height
             z: 0
         });

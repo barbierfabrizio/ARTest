@@ -472,7 +472,7 @@ function loadActivityModels(activityId) {
             modelSrcUrl: "./assets/ape_statue.glb",
             latLng: "51.21812077369592, 4.400496482849122",
             height: -7,
-            rotation: 260,
+            rotation: 0,
             scale: 10,
             savedFileName: "ape_statue-20230306224058.glb"
         },
@@ -755,7 +755,7 @@ function showGLTFModels(models) {
         gltfModel.setAttribute('gltf-model', '#' + model.savedFileName);
         gltfModel.setAttribute('id', model.savedFileName + 'Model');
         gltfModel.setAttribute("position", {
-            x: 10,
+            x: -50,
             y: model.height, // set height
             z: 0
         });

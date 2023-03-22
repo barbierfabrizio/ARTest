@@ -761,7 +761,7 @@ function showGLTFModels(models) {
         });
         gltfModel.setAttribute("rotation", {
             x: 0,
-            y: model.rotation,
+            y: 0,
             z: 0
         });
         gltfModel.setAttribute("clickgltf", "") // onClick

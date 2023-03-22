@@ -757,7 +757,7 @@ function showGLTFModels(models) {
         gltfModel.setAttribute("position", {
             x: 0,
             y: model.height, // set height
-            z: 0
+            z: 10
         });
         gltfModel.setAttribute("rotation", {
             x: 0,

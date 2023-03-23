@@ -192,22 +192,22 @@ function loadActivityMarkers() {
         {
             activityId: "0",
             activityTitle: "Een bankje in het park",
-            latLng: "51.17214, 4.139532"
+            latLng: "51.218912965, 4.401616741"
         },
         {
             activityId: "1",
             activityTitle: "Een bankje in het park",
-            latLng: "51.18312, 4.130058"
+            latLng: "51.2190400738, 4.4017077785"
         },
         {
             activityId: "2",
-            activityTitle: "test",
-            latLng: "51.172300, 4.139998"
+            activityTitle: "Vergroening Groenplaats",
+            latLng: "51.219015127, 4.401997959"
         },
         {
             activityId: "3",
             activityTitle: "Voetbalveld Bernarduscentrum",
-            latLng: "51.217787, 4.402868"
+            latLng: "51.2188832667, 4.4020074426"
         },
         {
             activityId: "4",
@@ -217,7 +217,7 @@ function loadActivityMarkers() {
         {
             activityId: "5",
             activityTitle: "Extra verlichting Groenplaats",
-            latLng: "51.218553, 4.401192"
+            latLng: "51.2190994703, 4.4018651970"
         },
         {
             activityId: "6",
@@ -238,6 +238,16 @@ function loadActivityMarkers() {
             activityId: "9",
             activityTitle: "Vergroening Groenplaats",
             latLng: "51.219007, 4.401327"
+        },
+        {
+            activityId: "10",
+            activityTitle: "Extra Vergroening Groenplaats",
+            latLng: "51.2189723617, 4.4018424377"
+        },
+        {
+            activityId: "11",
+            activityTitle: "T-Rex",
+            latLng: "51.217837260376, 4.403172908406"
         }
     ]
 
@@ -322,8 +332,8 @@ function loadActivityInformation(activityId) {
         },
         {
             activityId: "2",
-            activityTitle: "test",
-            activityDescription: "test",
+            activityTitle: "Vergroening Groenplaats",
+            activityDescription: "Vergroening Groenplaats",
             projectName: "Meerjarenplan Antwerpen",
             activityWriter: "Stad Antwerpen",
             likeCount: 0,
@@ -377,8 +387,8 @@ function loadActivityInformation(activityId) {
         },
         {
             activityId: "7",
-            activityTitle: "Test Aula",
-            activityDescription: "Test Aula",
+            activityTitle: "T-Rex",
+            activityDescription: "T-Rex in de Aula",
             projectName: "Meerjarenplan Antwerpen",
             activityWriter: "Stad Antwerpen",
             likeCount: 15,
@@ -401,6 +411,28 @@ function loadActivityInformation(activityId) {
             activityId: "9",
             activityTitle: "Vergroening Groenplaats",
             activityDescription: "Extra bomen op de Groenplaats",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 10,
+            shareCount: 2,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
+        {
+            activityId: "10",
+            activityTitle: "Vergroening Groenplaats",
+            activityDescription: "Extra bomen op de Groenplaats",
+            projectName: "Meerjarenplan Antwerpen",
+            activityWriter: "Stad Antwerpen",
+            likeCount: 10,
+            shareCount: 2,
+            commentCount: 0,
+            readMoreUrl: "https://www.antwerpen.be/"
+        },
+        {
+            activityId: "11",
+            activityTitle: "T-Rex",
+            activityDescription: "T-Rex in het Bernarduscentrum",
             projectName: "Meerjarenplan Antwerpen",
             activityWriter: "Stad Antwerpen",
             likeCount: 10,
@@ -450,7 +482,7 @@ function loadActivityModels(activityId) {
             activityId: "0",
             modelId: "0",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.218017, 4.403158",
+            latLng: "51.218912965, 4.401616741",
             height: -7,
             rotation: 260,
             scale: 0.030,
@@ -460,7 +492,7 @@ function loadActivityModels(activityId) {
             activityId: "1",
             modelId: "1",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.183177, 4.130018",
+            latLng: "51.2190400738, 4.4017077785",
             height: -7,
             rotation: 260,
             scale: 0.030,
@@ -549,12 +581,12 @@ function loadActivityModels(activityId) {
         {
             activityId: "7",
             modelId: "10",
-            modelSrcUrl: "./assets/fast-food.glb",
-            latLng: "51.2182811, 4.4009055",
+            modelSrcUrl: "./assets/tyrannosarus_rex_free_model.glb",
+            latLng: "51.21825430397, 4.40088559893",
             height: -7,
-            rotation: 0,
-            scale: 20,
-            savedFileName: "fast_food-20230306225053.glb"
+            rotation: 180,
+            scale: 1,
+            savedFileName: "tyrannosarus_rex_free_model-20230306225053.glb"
         },
         {
             activityId: "8",
@@ -576,6 +608,76 @@ function loadActivityModels(activityId) {
             scale: 25,
             savedFileName: "stylized_tree-20230306324058.glb"
         },
+        {
+            activityId: "10",
+            modelId: "13",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.2191030360, 4.4018064022",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230306324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "14",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.219079309, 4.4019562342",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230316324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "15",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.218975974, 4.401992269",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230326324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "16",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.21889159678, 4.40191071566",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230336324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "17",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.21890702227, 4.40173433109",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230346324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "18",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.21899847419, 4.401707778584",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230356324058.glb"
+        },
+        {
+            activityId: "11",
+            modelId: "19",
+            modelSrcUrl: "./assets/tyrannosarus_rex_free_model.glb",
+            latLng: "51.21783726037, 4.403172908406",
+            height: -7,
+            rotation: 180,
+            scale: 1,
+            savedFileName: "tyrannosarus_rex_free_model-20230306225053.glb"
+        },
     ]
  
     const data = dataList.filter(a => a.activityId === activityId)
@@ -593,7 +695,7 @@ function removeActivityModels(activityId) {
             activityId: "0",
             modelId: "0",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.218017, 4.403158",
+            latLng: "51.218912965, 4.401616741",
             height: -7,
             rotation: 260,
             scale: 0.030,
@@ -603,31 +705,31 @@ function removeActivityModels(activityId) {
             activityId: "1",
             modelId: "1",
             modelSrcUrl: "./assets/wooden_bench.glb",
-            latLng: "51.21779, 4.40287",
+            latLng: "51.2190400738, 4.4017077785",
             height: -7,
             rotation: 260,
             scale: 0.030,
-            savedFileName: "wooden_bench-20230306224054.glb"
+            savedFileName: "wooden_bench-20230306224053.glb"
         },
         {
             activityId: "2",
             modelId: "2",
-            modelSrcUrl: "./assets/football_goal_rework.glb",
-            latLng: "51.172256, 4.139977",
-            height: -3,
-            rotation: 90,
-            scale: 2,
-            savedFileName: "football_goal_rework-20230306224058.glb"
+            modelSrcUrl: "./assets/ape_statue.glb",
+            latLng: "51.218124135521485, 4.400517940521241",
+            height: -7,
+            rotation: 260,
+            scale: 10,
+            savedFileName: "ape_statue-20230306224058.glb"
         },
         {
             activityId: "2",
             modelId: "3",
-            modelSrcUrl: "./assets/ape_statue.glb",
-            latLng: "51.218124135521485, 4.400517940521241",
+            modelSrcUrl: "./assets/football_goal_rework.glb",
+            latLng: "51.172342, 4.140015",
             height: -3,
-            rotation: 260,
-            scale: 5,
-            savedFileName: "ape_statue-20230306224058.glb"
+            rotation: 180,
+            scale: 2,
+            savedFileName: "football_goal_rework-20230306224058.glb"
         },
         {
             activityId: "3",
@@ -635,7 +737,7 @@ function removeActivityModels(activityId) {
             modelSrcUrl: "./assets/football_goal_rework.glb",
             latLng: "51.217871, 4.402883",
             height: -3,
-            rotation: 90,
+            rotation: 180,
             scale: 2,
             savedFileName: "football_goal_rework-20230306224058.glb"
         },
@@ -645,7 +747,7 @@ function removeActivityModels(activityId) {
             modelSrcUrl: "./assets/football_goal_rework.glb",
             latLng: "51.217698, 4.402844",
             height: -3,
-            rotation: 90,
+            rotation: 180,
             scale: 2,
             savedFileName: "football_goal_rework-20230306224058.glb"
         },
@@ -665,7 +767,7 @@ function removeActivityModels(activityId) {
             modelSrcUrl: "./assets/wooden_bench.glb",
             latLng: "51.218994, 4.401918",
             height: -7,
-            rotation: 260,
+            rotation: 180,
             scale: 0.030,
             savedFileName: "wooden_bench-20230306224053.glb"
         },
@@ -692,12 +794,12 @@ function removeActivityModels(activityId) {
         {
             activityId: "7",
             modelId: "10",
-            modelSrcUrl: "./assets/fast-food.glb",
-            latLng: "51.2182811, 4.4009055",
+            modelSrcUrl: "./assets/tyrannosarus_rex_free_model.glb",
+            latLng: "51.21808381, 4.40072983",
             height: -7,
-            rotation: 0,
-            scale: 20,
-            savedFileName: "fast_food-20230306225053.glb"
+            rotation: 180,
+            scale: 1,
+            savedFileName: "tyrannosarus_rex_free_model-20230306225053.glb"
         },
         {
             activityId: "8",
@@ -718,6 +820,76 @@ function removeActivityModels(activityId) {
             rotation: 0,
             scale: 25,
             savedFileName: "stylized_tree-20230306324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "13",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.2191030360, 4.4018064022",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230306324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "14",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.219079309, 4.4019562342",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230316324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "15",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.218975974, 4.401992269",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230326324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "16",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.21889159678, 4.40191071566",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230336324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "17",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.21890702227, 4.40173433109",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230346324058.glb"
+        },
+        {
+            activityId: "10",
+            modelId: "18",
+            modelSrcUrl: "./assets/stylized_tree.glb",
+            latLng: "51.21899847419, 4.401707778584",
+            height: -5,
+            rotation: 0,
+            scale: 25,
+            savedFileName: "stylized_tree-20230356324058.glb"
+        },
+        {
+            activityId: "11",
+            modelId: "19",
+            modelSrcUrl: "./assets/tyrannosarus_rex_free_model.glb",
+            latLng: "51.21783726037, 4.403172908406",
+            height: -7,
+            rotation: 180,
+            scale: 1,
+            savedFileName: "tyrannosarus_rex_free_model-20230306225053.glb"
         },
     ]
 
@@ -921,6 +1093,14 @@ function loadActivityTags() {
         {
             activityId: "9",
             tagId: "0"
+        },
+        {
+            activityId: "10",
+            tagId: "0"
+        },
+        {
+            activityId: "11",
+            tagId: "1"
         },
     ]
 
